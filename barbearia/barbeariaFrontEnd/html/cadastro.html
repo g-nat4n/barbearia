@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrar Conta</title>
+<link rel="stylesheet" href="../css/cadastro.css">
+</head>
+<body>
+
+<header class="header">
+    <span class="voltar" onclick="voltar()">⬅</span>
+    <h3>Registrar Conta</h3>
+</header>
+
+<div class="container">
+    <h2>Registrar Conta</h2>
+    <form class="form-login" id="formRegistro">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" placeholder="Seu nome completo" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="exemplo@email.com" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+        <label for="confirmarSenha">Confirmar Senha</label>
+        <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" required>
+
+        <button type="button" id="btnRegistro">Registrar</button>
+    </form>
+
+    <p class="cadastro-link">
+        Já tem conta? <a href="login.html">Faça login</a>
+    </p>
+</div>
+
+<!-- Modal de aviso -->
+<div id="modalAviso" class="modal">
+    <div class="modal-content">
+        <p id="mensagemModal"></p>
+        <button onclick="fecharModal()">OK</button>
+    </div>
+</div>
+
+<script src="../cadastro.js" defer></script>
+</body>
+</html>

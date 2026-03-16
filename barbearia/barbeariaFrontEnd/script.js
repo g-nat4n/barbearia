@@ -208,3 +208,34 @@ function mostrarModal(mensagem) {
     }
 }
 
+// login
+
+const usuario = JSON.parse(localStorage.getItem("usuario"))
+
+if(usuario){
+document.querySelector(".header-actions").innerHTML =
+`
+<span>Olá, ${usuario.usuario}</span>
+<button onclick="logout()">Sair</button>
+`
+}
+
+function logout(){
+localStorage.removeItem("usuario")
+window.location.href = "login.html"
+}
+
+const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+const headerActions = document.getElementById('headerActions');
+
+if (usuarioLogado) {
+    headerActions.innerHTML = `
+    <span class="usuario-nome">Olá, ${usuarioLogado.usuario}</span>
+    <button id="btnSair" class="btn-action">Sair</button>
+`;
+
+    document.getElementById('btnSair').addEventListener('click', () => {
+        localStorage.removeItem('usuarioLogado');
+        window.location.reload();
+    });
+}
