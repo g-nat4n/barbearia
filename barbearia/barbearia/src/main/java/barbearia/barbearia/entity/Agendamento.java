@@ -18,6 +18,10 @@ public class Agendamento {
     private String contato;
     private String servico;
 
+    @ManyToOne
+    private Usuario barbeiro;
+
+
 
     public Agendamento() {
     }
