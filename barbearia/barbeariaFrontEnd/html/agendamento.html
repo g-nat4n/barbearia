@@ -26,29 +26,37 @@
 
 <form id="formAgendamento" class="form-agendamento">
 
-<label>Serviço</label>
-<input type="text" id="servico" readonly>
+    <label for="servico">Serviço</label>
+    <input type="text" id="servico" readonly>
 
-<label>Nome</label>
-<input type="text" id="nomeCliente" required>
+    <label for="nomeCliente">Nome</label>
+    <input type="text" id="nomeCliente" required placeholder="Seu nome completo">
 
-<label>Contato</label>
-<input type="text" id="contato" required>
+    <label for="contato">Contato</label>
+    <input type="text" id="contato" required placeholder="(00) 00000-0000">
 
-<label>Data e Hora</label>
-<input type="datetime-local" id="dataAgendada" required>
+    <label for="dataAgendada">Data do Agendamento</label>
+    <input type="date" id="dataAgendada" required>
 
-<button type="submit">Confirmar Agendamento</button>
+    <label>Horários Disponíveis</label>
+    <div id="container-horarios" class="grid-horarios">
+        <p style="color: #666; font-size: 0.9rem;">Selecione uma data para ver os horários</p>
+    </div>
+
+    <button type="button" onclick="enviarAgendamento()">Confirmar Agendamento</button>
 
 </form>
 
-</div>
-
 <div id="modalAviso" class="modal">
+
   <div class="modal-content">
+
     <p id="mensagemModal"></p>
+
     <button onclick="fecharModal()">OK</button>
+
   </div>
+
 </div>
 
 <script src="../script.js"></script>
