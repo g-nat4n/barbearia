@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -46,5 +47,12 @@ public class AgendamentoController {
     public ResponseEntity<Agendamento> deletar(@PathVariable Long id) {
         Agendamento deletado = agendamentoService.deletarAgendamento(id);
         return ResponseEntity.ok(deletado);
+    }
+
+    @GetMapping("/disponiveis")
+    public ResponseEntity<List<String>> listarDisponiveis(@RequestParam("data") String dataStr) {
+        LocalDate data = LocalDate.parse(dataStr);
+        List<String> disponiveis = agendamentoService.buscarHorariosDisponiveis(data);
+        return ResponseEntity.ok(disponiveis);
     }
 }
