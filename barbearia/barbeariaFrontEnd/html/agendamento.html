@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agendar Serviço</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/agendar.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<span class="voltar" onclick="voltar()">⬅</span>
+
+<h3>Agendar Serviço</h3>
+
+</header>
+
+<div class="container">
+
+<h2>Agendar Serviço</h2>
+
+<form id="formAgendamento" class="form-agendamento">
+
+<label>Serviço</label>
+<input type="text" id="servico" readonly>
+
+<label>Nome</label>
+<input type="text" id="nomeCliente" required>
+
+<label>Contato</label>
+<input type="text" id="contato" required>
+
+<label>Data e Hora</label>
+<input type="datetime-local" id="dataAgendada" required>
+
+<button type="submit">Confirmar Agendamento</button>
+
+</form>
+
+</div>
+
+<div id="modalAviso" class="modal">
+  <div class="modal-content">
+    <p id="mensagemModal"></p>
+    <button onclick="fecharModal()">OK</button>
+  </div>
+</div>
+
+<script src="../script.js"></script>
+
+
+
+
+</body>
+</html>

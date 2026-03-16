@@ -1,0 +1,154 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FUNDO */
+
+body{
+background:#0d1117;
+color:white;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+padding:15px 20px;
+background:#161b22;
+gap:15px;
+}
+
+.voltar{
+font-size:22px;
+cursor:pointer;
+}
+
+.voltar:hover{
+color:#1f6feb;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:420px;
+margin:40px auto;
+padding:25px;
+background:#161b22;
+border-radius:12px;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+/* TITULO */
+
+h2{
+text-align:center;
+margin-bottom:25px;
+}
+
+/* FORM */
+
+.form-agendamento{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+/* LABEL */
+
+.form-agendamento label{
+font-size:14px;
+color:#ccc;
+}
+
+/* INPUT */
+
+.form-agendamento input{
+padding:14px;
+border-radius:10px;
+border:none;
+background:#0d1117;
+color:white;
+}
+
+/* INPUT READONLY */
+
+.form-agendamento input[readonly]{
+background:#222;
+}
+
+/* BOTÃO */
+
+.form-agendamento button{
+margin-top:15px;
+padding:14px;
+background:#1f6feb;
+border:none;
+border-radius:10px;
+color:white;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.form-agendamento button:hover{
+background:#013179;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:600px){
+
+.container{
+margin:20px;
+padding:20px;
+}
+
+}
+
+.modal{
+position: fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: rgba(0,0,0,0.6);
+display:none;
+align-items:center;
+justify-content:center;
+z-index:1000;
+}
+
+.modal-content{
+background:#0f172a;
+padding:30px;
+border-radius:12px;
+text-align:center;
+color:white;
+width:280px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal-content p{
+margin-bottom:20px;
+font-size:16px;
+}
+
+.modal-content button{
+background:#2563eb;
+border:none;
+padding:10px 20px;
+border-radius:8px;
+color:white;
+cursor:pointer;
+font-weight:bold;
+}
+
+.modal-content button:hover{
+background:#1d4ed8;
+}
